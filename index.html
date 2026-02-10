@@ -262,25 +262,48 @@
       gap: 20px;
     }
     .screenshot-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      overflow: hidden;
       transition: all 0.4s;
     }
     .screenshot-card:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 32px 64px -16px rgba(139,92,246,0.3);
+      transform: translateY(-8px);
+    }
+    .screenshot-card:hover .screenshot-window {
+      box-shadow: 0 24px 48px -12px rgba(139,92,246,0.4);
       border-color: var(--primary);
+    }
+    .screenshot-window {
+      background: #1f1f2e;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.4s;
+    }
+    .screenshot-window-header {
+      background: #2a2a3e;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .screenshot-window-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .screenshot-window-dot.red { background: #ff5f57; }
+    .screenshot-window-dot.yellow { background: #febc2e; }
+    .screenshot-window-dot.green { background: #28c840; }
+    .screenshot-window-body {
+      background: #111118;
     }
     .screenshot-img {
       width: 100%;
       height: auto;
-      object-fit: contain;
       display: block;
     }
     .screenshot-placeholder {
-      width: 100%; aspect-ratio: 9/16;
+      width: 100%; 
+      aspect-ratio: 9/16;
       background: linear-gradient(180deg, #1a1a25 0%, #0f0f18 100%);
       display: flex; flex-direction: column;
       align-items: center; justify-content: center; gap: 12px;
@@ -288,11 +311,11 @@
     .screenshot-placeholder-icon { font-size: 40px; }
     .screenshot-placeholder-text { font-size: 12px; color: var(--text-muted); font-weight: 500; }
     .screenshot-label {
-      padding: 16px;
+      padding: 14px;
       text-align: center;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      color: var(--text-muted);
+      color: var(--text);
     }
     
     /* CTA Section */
@@ -564,23 +587,68 @@
         </div>
         <div class="screenshots-grid">
           <div class="screenshot-card">
-            <img src="screenshots/dashboard.png" alt="Dashboard" class="screenshot-img" onerror="this.outerHTML='<div class=screenshot-placeholder><div class=screenshot-placeholder-icon>📊</div><div class=screenshot-placeholder-text>Dashboard</div></div>'">
+            <div class="screenshot-window">
+              <div class="screenshot-window-header">
+                <div class="screenshot-window-dot red"></div>
+                <div class="screenshot-window-dot yellow"></div>
+                <div class="screenshot-window-dot green"></div>
+              </div>
+              <div class="screenshot-window-body">
+                <img src="screenshots/dashboard.png" alt="Dashboard" class="screenshot-img">
+              </div>
+            </div>
             <div class="screenshot-label">Dashboard</div>
           </div>
           <div class="screenshot-card">
-            <img src="screenshots/analytics.png" alt="Analytics" class="screenshot-img" onerror="this.outerHTML='<div class=screenshot-placeholder><div class=screenshot-placeholder-icon>📈</div><div class=screenshot-placeholder-text>Analytics</div></div>'">
+            <div class="screenshot-window">
+              <div class="screenshot-window-header">
+                <div class="screenshot-window-dot red"></div>
+                <div class="screenshot-window-dot yellow"></div>
+                <div class="screenshot-window-dot green"></div>
+              </div>
+              <div class="screenshot-window-body">
+                <img src="screenshots/analytics.png" alt="Analytics" class="screenshot-img">
+              </div>
+            </div>
             <div class="screenshot-label">Analytics</div>
           </div>
           <div class="screenshot-card">
-            <img src="screenshots/compare.png" alt="Compare Prices" class="screenshot-img" onerror="this.outerHTML='<div class=screenshot-placeholder><div class=screenshot-placeholder-icon>🌍</div><div class=screenshot-placeholder-text>Compare</div></div>'">
+            <div class="screenshot-window">
+              <div class="screenshot-window-header">
+                <div class="screenshot-window-dot red"></div>
+                <div class="screenshot-window-dot yellow"></div>
+                <div class="screenshot-window-dot green"></div>
+              </div>
+              <div class="screenshot-window-body">
+                <img src="screenshots/compare.png" alt="Compare Prices" class="screenshot-img">
+              </div>
+            </div>
             <div class="screenshot-label">Price Compare</div>
           </div>
           <div class="screenshot-card">
-            <img src="screenshots/alerts.png" alt="Alerts" class="screenshot-img" onerror="this.outerHTML='<div class=screenshot-placeholder><div class=screenshot-placeholder-icon>🔔</div><div class=screenshot-placeholder-text>Alerts</div></div>'">
+            <div class="screenshot-window">
+              <div class="screenshot-window-header">
+                <div class="screenshot-window-dot red"></div>
+                <div class="screenshot-window-dot yellow"></div>
+                <div class="screenshot-window-dot green"></div>
+              </div>
+              <div class="screenshot-window-body">
+                <img src="screenshots/alerts.png" alt="Alerts" class="screenshot-img">
+              </div>
+            </div>
             <div class="screenshot-label">Alerts</div>
           </div>
           <div class="screenshot-card">
-            <img src="screenshots/themes.png" alt="Themes" class="screenshot-img" onerror="this.outerHTML='<div class=screenshot-placeholder><div class=screenshot-placeholder-icon>🎨</div><div class=screenshot-placeholder-text>Themes</div></div>'">
+            <div class="screenshot-window">
+              <div class="screenshot-window-header">
+                <div class="screenshot-window-dot red"></div>
+                <div class="screenshot-window-dot yellow"></div>
+                <div class="screenshot-window-dot green"></div>
+              </div>
+              <div class="screenshot-window-body">
+                <img src="screenshots/themes.png" alt="Themes" class="screenshot-img">
+              </div>
+            </div>
             <div class="screenshot-label">Themes</div>
           </div>
         </div>
