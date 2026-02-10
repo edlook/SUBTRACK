@@ -140,38 +140,51 @@
     .hero-stat-value span { color: var(--primary); }
     .hero-stat-label { font-size: 15px; color: var(--text-muted); margin-top: 4px; }
     
-    /* Phone Mockup */
+    /* Browser Extension Mockup */
     .hero-visual { display: flex; justify-content: center; position: relative; }
-    .phone-mockup {
-      width: 300px;
-      background: linear-gradient(180deg, #1f1f2e 0%, #0f0f18 100%);
-      border-radius: 48px;
-      padding: 14px;
+    .browser-mockup {
+      width: 380px;
+      background: #1f1f2e;
+      border-radius: 16px;
       box-shadow: 
         0 50px 100px -20px rgba(0,0,0,0.8),
-        0 0 0 1px rgba(255,255,255,0.1),
-        inset 0 1px 0 rgba(255,255,255,0.1);
+        0 0 0 1px rgba(255,255,255,0.1);
+      overflow: hidden;
       position: relative;
     }
-    .phone-mockup::before {
-      content: '';
-      position: absolute;
-      top: 20px; left: 50%; transform: translateX(-50%);
-      width: 80px; height: 24px;
-      background: #000;
-      border-radius: 20px;
-      z-index: 10;
+    .browser-header {
+      background: #2a2a3e;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
-    .phone-screen {
+    .browser-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+    }
+    .browser-dot.red { background: #ff5f57; }
+    .browser-dot.yellow { background: #febc2e; }
+    .browser-dot.green { background: #28c840; }
+    .browser-title {
+      flex: 1;
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-left: -52px;
+    }
+    .browser-screen {
       background: #111118;
-      border-radius: 36px;
-      overflow: hidden;
-      aspect-ratio: 9/19;
     }
-    .phone-screen img { width: 100%; height: 100%; object-fit: cover; }
-    .phone-glow {
+    .browser-screen img { 
+      width: 100%; 
+      height: auto; 
+      display: block; 
+    }
+    .browser-glow {
       position: absolute;
-      width: 400px; height: 400px;
+      width: 500px; height: 500px;
       background: radial-gradient(circle, rgba(139,92,246,0.3) 0%, transparent 70%);
       top: 50%; left: 50%; transform: translate(-50%, -50%);
       z-index: -1;
@@ -262,8 +275,9 @@
     }
     .screenshot-img {
       width: 100%;
-      aspect-ratio: 9/16;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
+      display: block;
     }
     .screenshot-placeholder {
       width: 100%; aspect-ratio: 9/16;
@@ -468,10 +482,16 @@
             </div>
           </div>
           <div class="hero-visual">
-            <div class="phone-glow"></div>
-            <div class="phone-mockup">
-              <div class="phone-screen">
-                <img src="screenshots/dashboard.png" alt="SubTrack Dashboard" onerror="this.parentElement.innerHTML='<div style=\'padding:20px;color:#666;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;\'>Dashboard Preview</div>'">
+            <div class="browser-glow"></div>
+            <div class="browser-mockup">
+              <div class="browser-header">
+                <div class="browser-dot red"></div>
+                <div class="browser-dot yellow"></div>
+                <div class="browser-dot green"></div>
+                <div class="browser-title">SubTrack Pro Extension</div>
+              </div>
+              <div class="browser-screen">
+                <img src="screenshots/dashboard.png" alt="SubTrack Dashboard" onerror="this.parentElement.innerHTML='<div style=\'padding:40px;color:#666;text-align:center;\'>Dashboard Preview</div>'">
               </div>
             </div>
           </div>
