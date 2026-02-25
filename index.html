@@ -782,4 +782,15 @@
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function showPrivacy() {
       document.querySelector('.main-content').classList.add('hidden');
-      document.getElementById('privacy-page').
+      document.getElementById('privacy-page').classList.add('active');
+      window.scrollTo(0, 0);
+    }
+    
+    function showMain() {
+      document.querySelector('.main-content').classList.remove('hidden');
+      document.getElementById('privacy-page').classList.remove('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html>
