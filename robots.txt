@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /GITHUB/
+
+Sitemap: https://subtrackpro.com/sitemap.xml
