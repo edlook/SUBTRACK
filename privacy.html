@@ -234,7 +234,7 @@
                 <span class="logo-text">SubTrack Pro</span>
             </a>
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: February 25, 2026</p>
+            <p class="last-updated">Last updated: October 29, 2026</p>
         </header>
 
         <main class="content" id="content">
@@ -248,10 +248,18 @@
             <h2>Information We Store</h2>
             <p>SubTrack Pro stores the following information <strong>locally on your device only</strong>:</p>
             <ul>
-                <li><strong>Subscription Data:</strong> Information about subscriptions you manually add, including service names, prices, billing cycles, and renewal dates.</li>
+                <li><strong>Subscription Data:</strong> Information about subscriptions you add yourself or that auto-detect adds for you, including service names, prices, billing cycles, renewal and trial end dates.</li>
                 <li><strong>Preferences:</strong> Your chosen settings, theme preferences, region, and notification configurations.</li>
             </ul>
             <p><strong>Important:</strong> This data is stored using Chrome's local storage API and never leaves your device. We have no access to it.</p>
+
+            <p>SubTrack Pro has <strong>no account, no sign-up and no cloud sync</strong>. Because your data lives only in this browser, it does not move between devices. Use CSV export if you want a copy.</p>
+
+            <h2>Auto-Detect on Supported Sites</h2>
+            <p>When auto-detect is on (it can be switched off in Settings &gt; Privacy), SubTrack Pro runs only on the supported subscription sites listed in the extension (for example Netflix, Spotify, Disney+, Dropbox, Adobe and ChatGPT). When you open an account, billing or plan page there, it reads the price and trial date shown on that page and adds the subscription to your local list. It does not run on other websites.</p>
+
+            <h2>Optional Inbox Scanning</h2>
+            <p>Inbox scanning for Gmail, Outlook and Yahoo Mail is <strong>off by default</strong>. If you turn it on in Settings &gt; Privacy, Chrome first asks you to allow access to these mail sites. While it is on, SubTrack Pro looks for subscription receipts in the mail page you have open, inside your browser. Only the service name, price and date are saved, locally. Email content is not stored and is never sent anywhere. Turning the switch off removes the access again.</p>
 
             <h2>Information We Do NOT Collect</h2>
             <p>We want to be crystal clear about what we don't do:</p>
@@ -290,7 +298,9 @@
                 <li><strong>Storage:</strong> To save your subscriptions and settings locally on your device.</li>
                 <li><strong>Alarms:</strong> To schedule payment reminder notifications.</li>
                 <li><strong>Notifications:</strong> To display payment reminders before billing dates.</li>
-                <li><strong>Host Permissions:</strong> To optionally detect subscription services you visit and auto-fill pricing. This feature can be disabled in settings.</li>
+                <li><strong>Access to supported subscription sites:</strong> Lets auto-detect read the price on your account or billing page of supported services. It is not used on other sites and can be switched off in settings.</li>
+                <li><strong>Scripting:</strong> Used only to start inbox scanning on Gmail, Outlook and Yahoo Mail after you turn it on, and to stop it when you turn it off.</li>
+                <li><strong>Optional access to Gmail, Outlook and Yahoo Mail:</strong> Requested only if you turn on inbox scanning. If you never turn it on, the extension never has this access.</li>
             </ul>
 
             <h2>Your Rights</h2>
@@ -299,7 +309,7 @@
                 <li><strong>Access:</strong> View all data stored by the extension anytime</li>
                 <li><strong>Export:</strong> Download your data as CSV from the Analytics section</li>
                 <li><strong>Delete:</strong> Remove all data by uninstalling the extension</li>
-                <li><strong>Control:</strong> Enable or disable auto-detection in Privacy settings</li>
+                <li><strong>Control:</strong> Enable or disable auto-detection and inbox scanning in Privacy settings</li>
             </ul>
 
             <h2>Data Security</h2>
