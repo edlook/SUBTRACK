@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SubTrack Pro Guides</title>
+    <link>https://subtrackpro.com/guides/</link>
+    <atom:link href="https://subtrackpro.com/guides/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Practical guides for keeping track of subscriptions and free trials, from the makers of SubTrack Pro.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 04 Nov 2026 12:00:00 +0100</lastBuildDate>
+    <item>
+      <title>Free trial reminder: how to never get charged after a free trial</title>
+      <link>https://subtrackpro.com/guides/free-trial-reminder.html</link>
+      <guid isPermaLink="true">https://subtrackpro.com/guides/free-trial-reminder.html</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0100</pubDate>
+      <description>Five ways to stop a free trial from turning into a charge: calendar alerts, virtual cards, cancelling early and trackers, compared.</description>
+    </item>
+    <item>
+      <title>How to track all your subscriptions in one place</title>
+      <link>https://subtrackpro.com/guides/track-all-subscriptions.html</link>
+      <guid isPermaLink="true">https://subtrackpro.com/guides/track-all-subscriptions.html</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0100</pubDate>
+      <description>Find every subscription in your card statements, app stores, email and password manager, then keep them in one simple list you can trust.</description>
+    </item>
+    <item>
+      <title>How to find hidden subscriptions: a 15-minute audit checklist</title>
+      <link>https://subtrackpro.com/guides/find-hidden-subscriptions.html</link>
+      <guid isPermaLink="true">https://subtrackpro.com/guides/find-hidden-subscriptions.html</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0100</pubDate>
+      <description>A 15-minute checklist to uncover forgotten subscriptions in card statements, Apple and Google Play settings, email receipts and a CSV export.</description>
+    </item>
+    <item>
+      <title>Annual vs monthly plans: when is the yearly plan actually cheaper?</title>
+      <link>https://subtrackpro.com/guides/annual-vs-monthly-subscriptions.html</link>
+      <guid isPermaLink="true">https://subtrackpro.com/guides/annual-vs-monthly-subscriptions.html</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0100</pubDate>
+      <description>Use a simple break-even formula to see when an annual plan beats monthly billing, plus refund, cancellation and renewal-reminder caveats.</description>
+    </item>
+  </channel>
+</rss>
