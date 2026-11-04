@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Sorry to see you go - SubTrack Pro</title>
+  <meta name="description" content="Thanks for trying SubTrack Pro. Tell us in one click why you uninstalled the extension.">
+  <link rel="canonical" href="https://subtrackpro.com/bye.html">
+  <meta name="theme-color" content="#0a0a0f">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/guides/guides.css">
+<script data-goatcounter="https://eugent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand"><span class="brand-icon" aria-hidden="true">∞</span><span class="brand-text">Sub<span>Track</span> Pro</span></a>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="bye">
+      <h1>Sorry to see you go</h1>
+      <p class="lead">Thanks for giving SubTrack Pro a try. If you have a moment, tell us why you uninstalled it. One click is enough.</p>
+
+      <ul class="reasons" aria-label="Reason for uninstalling">
+        <li><button type="button" class="reason" data-slug="only-trying" data-label="I only wanted to try it" aria-pressed="false">I only wanted to try it</button></li>
+        <li><button type="button" class="reason" data-slug="manual-entry" data-label="Too much manual entry" aria-pressed="false">Too much manual entry</button></li>
+        <li><button type="button" class="reason" data-slug="missing-feature" data-label="Missing a feature" aria-pressed="false">Missing a feature</button></li>
+        <li><button type="button" class="reason" data-slug="permissions" data-label="Permissions worried me" aria-pressed="false">Permissions worried me</button></li>
+        <li><button type="button" class="reason" data-slug="not-working" data-label="Something didn't work" aria-pressed="false">Something didn&rsquo;t work</button></li>
+        <li><button type="button" class="reason" data-slug="other" data-label="Other" aria-pressed="false">Other</button></li>
+      </ul>
+
+      <p class="thanks" id="thanks" role="status" aria-live="polite"></p>
+
+      <p class="more-link"><a href="mailto:support@subtrackpro.com?subject=SubTrack%20feedback">Tell us more</a> by email (optional). Clicking a button above only counts the answer. It stores no personal data.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="mailto:support@subtrackpro.com">support@subtrackpro.com</a>
+      </nav>
+      <p>&copy; 2026 SubTrack Pro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.reason');
+      var thanks = document.getElementById('thanks');
+      var done = false;
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (done) { return; }
+          done = true;
+          try {
+            if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+              window.goatcounter.count({
+                path: 'uninstall-reason-' + btn.getAttribute('data-slug'),
+                title: 'Uninstall: ' + btn.getAttribute('data-label'),
+                event: true
+              });
+            }
+          } catch (e) { /* analytics must never break the page */ }
+          buttons.forEach(function (b) {
+            b.disabled = true;
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          });
+          thanks.textContent = 'Thank you. Your answer helps us improve.';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
